@@ -11,6 +11,23 @@ from datetime import datetime
 import os
 os.environ["OPENAI_AGENTS_DISABLE_TRACING"] = "1"
 
+def run_python_code(python_code: str, dependecies: list[str]):
+    """
+    Runs the given python code
+
+    Args:
+        python_code (str): The python code to run
+        dependecies (list[str]): The dependecies to install
+
+    Returns:
+        str: The output of the python code
+    """
+    # create a subproces, 
+    # create one folder, write a files with a.py name, write python code in that file
+    # then use uv add ---script a.py dep1 dep2 dep3 
+    # the user uv run a.py
+    # then return the code
+    
 
 class TimeResponse(BaseModel):
     date: int = Field(..., description="The date of the current date and time i.e. 05 or 10")
